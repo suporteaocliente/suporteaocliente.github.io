@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Atendimento - internet fibra</title>
+    <title>Portal de Atendimento - Internet Fibra</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
             line-height: 1.6;
         }
-
-        /* Cores principais */
         :root {
             --verde: #00E676;
             --verde-escuro: #00C853;
@@ -29,8 +22,6 @@
             --cinza: #888;
             --branco: #ffffff;
         }
-
-        /* Header */
         header {
             background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
             border-bottom: 3px solid var(--verde);
@@ -40,26 +31,22 @@
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0, 230, 118, 0.15);
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
-
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-
         .logo-icon {
             width: 50px;
             height: 50px;
@@ -72,38 +59,33 @@
             font-size: 22px;
             font-weight: 800;
         }
-
         .logo h1 {
             color: var(--branco);
             font-size: 1.5rem;
             font-weight: 700;
         }
-
         .logo p {
             color: var(--verde);
             font-size: 0.85rem;
             font-weight: 600;
         }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
             flex-wrap: wrap;
         }
-
         nav a {
             text-decoration: none;
             color: var(--cinza);
             font-weight: 600;
             transition: color 0.3s;
             position: relative;
+            cursor: pointer;
         }
-
         nav a:hover {
             color: var(--verde);
         }
-
         nav a::after {
             content: '';
             position: absolute;
@@ -114,12 +96,9 @@
             background: var(--verde);
             transition: width 0.3s;
         }
-
         nav a:hover::after {
             width: 100%;
         }
-
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0a0a0a 0%, #0d1f0d 100%);
             padding: 80px 20px;
@@ -127,7 +106,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -138,35 +116,29 @@
             background: radial-gradient(circle, rgba(0,230,118,0.05) 0%, transparent 70%);
             animation: pulse-glow 4s ease-in-out infinite;
         }
-
         @keyframes pulse-glow {
             0%, 100% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.1); opacity: 1; }
         }
-
         .hero-content {
             position: relative;
             z-index: 1;
         }
-
         .hero h2 {
             color: var(--branco);
             font-size: 2.8rem;
             margin-bottom: 15px;
             font-weight: 800;
         }
-
         .hero h2 span {
             color: var(--verde);
         }
-
         .hero p {
             color: var(--cinza);
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto 30px;
         }
-
         .hero-img {
             max-width: 500px;
             width: 90%;
@@ -175,8 +147,6 @@
             box-shadow: 0 10px 40px rgba(0, 230, 118, 0.2);
             border: 2px solid rgba(0, 230, 118, 0.3);
         }
-
-        /* WhatsApp Buttons */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -193,19 +163,16 @@
             cursor: pointer;
             box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3);
         }
-
         .btn-whatsapp:hover {
             background: var(--verde-claro);
             transform: translateY(-2px) scale(1.02);
             box-shadow: 0 6px 25px rgba(0, 230, 118, 0.5);
         }
-
         .btn-whatsapp svg {
             width: 22px;
             height: 22px;
             fill: currentColor;
         }
-
         .btn-whatsapp-outline {
             display: inline-flex;
             align-items: center;
@@ -221,35 +188,28 @@
             border: 2px solid var(--verde);
             cursor: pointer;
         }
-
         .btn-whatsapp-outline:hover {
             background: var(--verde);
             color: #0a0a0a;
             transform: translateY(-2px);
         }
-
-        /* Services Section */
         .services {
             padding: 80px 20px;
             background: var(--preto);
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 50px;
         }
-
         .section-title h2 {
             color: var(--branco);
             font-size: 2.2rem;
             margin-bottom: 10px;
         }
-
         .section-title p {
             color: var(--cinza);
             font-size: 1.1rem;
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -257,7 +217,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .service-card {
             background: var(--preto-card);
             border: 2px solid #1a1a1a;
@@ -266,13 +225,11 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 230, 118, 0.15);
             border-color: var(--verde);
         }
-
         .service-icon {
             width: 65px;
             height: 65px;
@@ -286,25 +243,20 @@
             color: var(--verde);
             border: 2px solid rgba(0, 230, 118, 0.2);
         }
-
         .service-card h3 {
             color: var(--branco);
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
-
         .service-card p {
             color: var(--cinza);
             font-size: 0.92rem;
             margin-bottom: 20px;
         }
-
-        /* Gallery Section */
         .gallery {
             padding: 60px 20px;
             background: #0d0d0d;
         }
-
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -312,7 +264,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .gallery-item {
             position: relative;
             border-radius: 12px;
@@ -320,19 +271,16 @@
             border: 2px solid #1a1a1a;
             transition: all 0.3s;
         }
-
         .gallery-item:hover {
             border-color: var(--verde);
             transform: scale(1.02);
         }
-
         .gallery-item img {
             width: 100%;
             height: 220px;
             object-fit: cover;
             display: block;
         }
-
         .gallery-caption {
             position: absolute;
             bottom: 0;
@@ -344,20 +292,16 @@
             font-weight: 600;
             font-size: 0.95rem;
         }
-
-        /* CTA Section */
         .cta-section {
             padding: 80px 20px;
             background: linear-gradient(135deg, #0a0a0a 0%, #0d1f0d 100%);
             text-align: center;
         }
-
         .cta-section h2 {
             color: var(--branco);
             font-size: 2rem;
             margin-bottom: 15px;
         }
-
         .cta-section p {
             color: var(--cinza);
             font-size: 1.1rem;
@@ -366,7 +310,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .cta-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -374,7 +317,6 @@
             max-width: 900px;
             margin: 30px auto 0;
         }
-
         .cta-item {
             background: var(--preto-card);
             padding: 30px 20px;
@@ -382,56 +324,45 @@
             border: 2px solid #1a1a1a;
             transition: all 0.3s;
         }
-
         .cta-item:hover {
             border-color: var(--verde);
             box-shadow: 0 5px 20px rgba(0, 230, 118, 0.1);
         }
-
         .cta-item h4 {
             color: var(--verde);
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
-
         .cta-item p {
             color: var(--cinza);
             font-size: 0.9rem;
             margin-bottom: 15px;
         }
-
-        /* Info Banner */
         .info-banner {
             background: var(--verde);
             color: #0a0a0a;
             padding: 40px 20px;
             text-align: center;
         }
-
         .info-banner h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
             font-weight: 800;
         }
-
         .info-banner p {
             font-size: 1rem;
             margin-bottom: 20px;
             font-weight: 500;
         }
-
         .info-banner .btn-whatsapp {
             background: #0a0a0a;
             color: var(--verde);
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-
         .info-banner .btn-whatsapp:hover {
             background: #1a1a1a;
             color: var(--verde-claro);
         }
-
-        /* Floating WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -450,35 +381,24 @@
             transition: all 0.3s ease;
             animation: pulse-wpp 2s infinite;
         }
-
         .whatsapp-float:hover {
             transform: scale(1.1);
             background: var(--verde-claro);
         }
-
         .whatsapp-float svg {
             width: 30px;
             height: 30px;
             fill: #0a0a0a;
         }
-
         @keyframes pulse-wpp {
             0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.5); }
             70% { box-shadow: 0 0 0 15px rgba(0, 230, 118, 0); }
             100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
         }
-
-        /* Legal Sections */
         .legal-section {
             padding: 60px 20px;
             background: var(--preto);
-            display: none;
         }
-
-        .legal-section.active {
-            display: block;
-        }
-
         .legal-content {
             max-width: 900px;
             margin: 0 auto;
@@ -487,43 +407,35 @@
             border-radius: 16px;
             border: 1px solid #1a1a1a;
         }
-
         .legal-content h2 {
             color: var(--verde);
             font-size: 2rem;
             margin-bottom: 30px;
             text-align: center;
         }
-
         .legal-content h3 {
             color: var(--verde-claro);
             margin-top: 25px;
             margin-bottom: 10px;
         }
-
         .legal-content p {
             color: #aaa;
             margin-bottom: 15px;
             text-align: justify;
         }
-
         .legal-content ul {
             margin-left: 20px;
             color: #aaa;
             margin-bottom: 15px;
         }
-
         .legal-content li {
             margin-bottom: 8px;
         }
-
-        /* Footer */
         footer {
             background: #050505;
             padding: 40px 20px 20px;
             border-top: 3px solid var(--verde);
         }
-
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -532,30 +444,25 @@
             gap: 30px;
             margin-bottom: 30px;
         }
-
         .footer-section h4 {
             color: var(--verde);
             margin-bottom: 15px;
         }
-
         .footer-section p,
         .footer-section a {
             color: var(--cinza);
             text-decoration: none;
             line-height: 1.8;
         }
-
         .footer-section a:hover {
             color: var(--verde);
         }
-
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid #1a1a1a;
             color: var(--cinza);
         }
-
         .footer-links {
             display: flex;
             gap: 20px;
@@ -563,54 +470,44 @@
             justify-content: center;
             margin-bottom: 15px;
         }
-
         .footer-links a {
             color: var(--verde);
             text-decoration: none;
         }
-
         .footer-links a:hover {
             text-decoration: underline;
         }
-
         .back-btn {
             display: inline-block;
             margin-bottom: 20px;
             color: var(--verde);
             text-decoration: none;
             font-weight: 600;
+            cursor: pointer;
         }
-
         .back-btn:hover {
             color: var(--verde-claro);
         }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 20px;
             }
-
             nav ul {
                 justify-content: center;
             }
-
             .hero h2 {
                 font-size: 1.8rem;
             }
-
             .legal-content {
                 padding: 25px;
             }
-
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
                 bottom: 20px;
                 right: 20px;
             }
-
             .whatsapp-float svg {
                 width: 25px;
                 height: 25px;
@@ -621,7 +518,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -629,31 +525,30 @@
                     <div class="logo-icon">⚡</div>
                     <div>
                         <h1>Portal de Atendimento</h1>
-                        <p>internet fibra</p>
+                        <p>Internet Fibra</p>
                     </div>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#" onclick="showSection('home')">Início</a></li>
-                        <li><a href="#" onclick="showSection('privacidade')">Privacidade</a></li>
-                        <li><a href="#" onclick="showSection('termos')">Termos de Uso</a></li>
+                        <li><a onclick="showSection('home')">Início</a></li>
+                        <li><a onclick="showSection('privacidade')">Privacidade</a></li>
+                        <li><a onclick="showSection('termos')">Termos de Uso</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Home -->
     <div id="home" class="section-page">
         <section class="hero">
             <div class="container hero-content">
-                <h2>Internet Fibra <span>Ultra Rápida</span></h2>
+                <h2>Internet <span>Ultra Rápida</span></h2>
                 <p>Atendimento exclusivo para clientes nio internet fibra. Resolva tudo pelo Whatsapp com agilidade e sem burocracia.</p>
                 <a href="https://wa.me/5511967142582?text=Olá!%20Sou%20cliente%20de%20internet%20fibra%20e%20preciso%20de%20atendimento." target="_blank" class="btn-whatsapp">
                     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Falar no WhatsApp
                 </a>
-                <img src="images_fibra/1_Qual_a_diferen_a_entre_internet_de.png" alt="Cabo de internet fibra" class="hero-img">
+                <img src="https://kimi-web-img.moonshot.cn/img/blog.intelbras.com.br/cbd5d70f258f1de8deabbf579d4d13f4411123fe.jpg" alt="Cabo de Internet Fibra" class="hero-img">
             </div>
         </section>
 
@@ -667,7 +562,7 @@
                     <div class="service-icon">📄</div>
                     <h3>2ª Via de Boleto</h3>
                     <p>Emita a segunda via do seu boleto atualizado com encargos. Rápido e sem complicação.</p>
-                    <a href="https://wa.me/5511967142582?text=Olá!%20Preciso%20da%202ª%20via%20do%20boleto%20da%20internet%20fibra." target="_blank" class="btn-whatsapp">
+                    <a href="https://wa.me/5511967142582?text=Olá!%20Preciso%20da%202ª%20via%20do%20meu%20boleto%20da%20internet%20fibra." target="_blank" class="btn-whatsapp">
                         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Solicitar 2ª Via
                     </a>
@@ -705,33 +600,31 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section class="gallery">
             <div class="section-title">
-                <h2>Tecnologia internet fibra</h2>
+                <h2>Tecnologia Internet Fibra</h2>
                 <p>Conheça a infraestrutura que leva velocidade até você</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images_fibra/3_Tipos_de_Fibra_ptica_Citelia.png" alt="Cabo de internet fibra">
-                    <div class="gallery-caption">Cabo de internet fibra</div>
+                    <img src="https://kimi-web-img.moonshot.cn/img/citelia.es/df27750415409b60d42c189bb013af7641497dd4.jpg" alt="Cabo de Internet Fibra">
+                    <div class="gallery-caption">Cabo de Internet Fibra</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images_fibra/4_What_Is_Fiber_Optic_Internet_Fast.png" alt="Detalhe da Fibra">
-                    <div class="gallery-caption">Detalhe da Fibra</div>
+                    <img src="https://kimi-web-img.moonshot.cn/img/blog.frontier.com/e72a92f135674c9b2fc49ad42594c13df9b9543f.jpeg" alt="Detalhe da Internet Fibra">
+                    <div class="gallery-caption">Detalhe da Internet Fibra</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images_fibra/5_Kit_Conversor_de_M_dia_Fibra_ptica.png" alt="Equipamentos de Fibra">
-                    <div class="gallery-caption">Equipamentos de Fibra</div>
+                    <img src="https://kimi-web-img.moonshot.cn/img/down-br.img.susercontent.com/b4e9b00ca2efe2ff96314656f3431188e50fae19" alt="Equipamentos de Internet Fibra">
+                    <div class="gallery-caption">Equipamentos de Internet Fibra</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images_fibra/6_What_is_a_Fiber_Optic_Network_Guide.png" alt="Componentes da Fibra">
-                    <div class="gallery-caption">Componentes da Fibra</div>
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.zayo.com/b3268cd6a0db1e12a1b7d039d33abe57397c8e38.jpeg" alt="Componentes da Internet Fibra">
+                    <div class="gallery-caption">Componentes da Internet Fibra</div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
                 <h2>Precisa de ajuda agora?</h2>
@@ -765,7 +658,6 @@
             </div>
         </section>
 
-        <!-- Info Banner -->
         <section class="info-banner">
             <div class="container">
                 <h3>⚡ Atendimento Imediato</h3>
@@ -778,10 +670,9 @@
         </section>
     </div>
 
-    <!-- Política de Privacidade -->
-    <div id="privacidade" class="legal-section">
+    <div id="privacidade" class="legal-section" style="display:none;">
         <div class="legal-content">
-            <a href="#" class="back-btn" onclick="showSection('home')">← Voltar ao início</a>
+            <a class="back-btn" onclick="showSection('home')">← Voltar ao início</a>
             <h2>Política de Privacidade</h2>
             <p><strong>Última atualização:</strong> 16 de junho de 2026</p>
 
@@ -814,7 +705,7 @@
             <p>Você tem direito a acessar, corrigir, anonimizar, bloquear ou eliminar seus dados pessoais, conforme a LGPD.</p>
 
             <h3>6. Contato</h3>
-            <p>Para exercer seus direitos, entre em contato pelo e-mail: <strong>privacidade@portalatendimento.com.br</strong> ou pelo WhatsApp <strong>(31) 99903-0305</strong>.</p>
+            <p>Para exercer seus direitos, entre em contato pelo e-mail: <strong>privacidade@portalatendimento.com.br</strong> ou pelo WhatsApp <strong>(11) 96714-2582</strong>.</p>
 
             <div style="text-align: center; margin-top: 30px;">
                 <a href="https://wa.me/5511967142582?text=Olá!%20Tenho%20dúvidas%20sobre%20a%20Política%20de%20Privacidade." target="_blank" class="btn-whatsapp">
@@ -825,10 +716,9 @@
         </div>
     </div>
 
-    <!-- Termos de Uso -->
-    <div id="termos" class="legal-section">
+    <div id="termos" class="legal-section" style="display:none;">
         <div class="legal-content">
-            <a href="#" class="back-btn" onclick="showSection('home')">← Voltar ao início</a>
+            <a class="back-btn" onclick="showSection('home')">← Voltar ao início</a>
             <h2>Termos de Uso</h2>
             <p><strong>Última atualização:</strong> 16 de junho de 2026</p>
 
@@ -857,7 +747,7 @@
             <p>Estes termos são regidos pelas leis da República Federativa do Brasil.</p>
 
             <h3>7. Contato</h3>
-            <p>Em caso de dúvidas, entre em contato pelo e-mail <strong>suporte@portalatendimento.com.br</strong> ou WhatsApp <strong>(31) 99903-0305</strong>.</p>
+            <p>Em caso de dúvidas, entre em contato pelo e-mail <strong>suporte@portalatendimento.com.br</strong> ou WhatsApp <strong>(11) 96714-2582</strong>.</p>
 
             <div style="text-align: center; margin-top: 30px;">
                 <a href="https://wa.me/5511967142582?text=Olá!%20Tenho%20dúvidas%20sobre%20os%20Termos%20de%20Uso." target="_blank" class="btn-whatsapp">
@@ -868,12 +758,11 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Portal de Atendimento</h4>
-                <p>Atendimento exclusivo para clientes de internet internet fibra. Rápido, prático e sem burocracia.</p>
+                <p>Atendimento exclusivo para clientes nio internet fibra. Resolva tudo pelo Whatsapp com agilidade e sem burocracia.</p>
                 <div style="margin-top: 15px;">
                     <a href="https://wa.me/5511967142582?text=Olá!%20Vim%20pelo%20site%20do%20Portal%20de%20Atendimento%20Fibra." target="_blank" class="btn-whatsapp" style="padding: 10px 20px; font-size: 0.9rem;">
                         <svg viewBox="0 0 24 24" style="width:18px;height:18px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -894,9 +783,9 @@
             </div>
             <div class="footer-section">
                 <h4>Links Úteis</h4>
-                <p><a href="#" onclick="showSection('privacidade')">Política de Privacidade</a></p>
-                <p><a href="#" onclick="showSection('termos')">Termos de Uso</a></p>
-                <p><a href="#" onclick="showSection('home')">Página Inicial</a></p>
+                <p><a onclick="showSection('privacidade')">Política de Privacidade</a></p>
+                <p><a onclick="showSection('termos')">Termos de Uso</a></p>
+                <p><a onclick="showSection('home')">Página Inicial</a></p>
                 <p style="margin-top: 10px;">
                     <a href="https://wa.me/5511967142582?text=Olá!%20Preciso%20de%20ajuda%20com%20meu%20atendimento." target="_blank" style="color: var(--verde); font-weight: 600;">
                         💬 Suporte via WhatsApp
@@ -906,32 +795,33 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-links">
-                <a href="#" onclick="showSection('privacidade')">Política de Privacidade</a>
-                <a href="#" onclick="showSection('termos')">Termos de Uso</a>
+                <a onclick="showSection('privacidade')">Política de Privacidade</a>
+                <a onclick="showSection('termos')">Termos de Uso</a>
                 <a href="https://wa.me/5511967142582" target="_blank">WhatsApp</a>
             </div>
-            <p>© Portal de Atendimento - internet fibra. Todos os direitos reservados.</p>
+            <p>© Portal de Atendimento - Internet Fibra. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/5511967142582?text=Olá!%20Vim%20pelo%20Portal%20de%20Atendimento%20Fibra%20e%20preciso%20de%20ajuda." target="_blank" class="whatsapp-float" title="Falar no WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.section-page, .legal-section').forEach(el => {
-                el.style.display = 'none';
-            });
-            const target = document.getElementById(sectionId);
+            var allSections = document.querySelectorAll('.section-page, .legal-section');
+            for (var i = 0; i < allSections.length; i++) {
+                allSections[i].style.display = 'none';
+            }
+            var target = document.getElementById(sectionId);
             if (target) {
                 target.style.display = 'block';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo(0, 0);
             }
+            return false;
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function() {
             showSection('home');
         });
     </script>
